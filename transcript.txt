@@ -1,0 +1,289 @@
+#Transcript of running the final iteration of my code.#
+
+vagrant@precise64:/vagrant/CS166b/CS105b/pa-mazes$ ruby maze_shell.rb
+Welcome to the maze generator. Want to play through a maze?
+maze> yes
+Great! Let's get this started up...
+How many rows should this maze have? 5
+How many columns should this maze have? 5
+Okay, I've got your maze right here...
+Note: coordinates are (0, 0) at the top-left corner.
++ - + - + - + - + - +
+|           |   |   |
++ - + - +   + - + - +
+|   |   |   |   |   |
++ - + - +   +   + - +
+|               |   |
++ - + - + - +   + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+So, you can solve it yourself, check if the maze can be solved or get a trace through the maze, if it can be solved. The commands are as follows:
+'done': finish with this maze
+'solvable?': check if this maze can be solved
+'solve': get a route through the maze, if it can be solved
+'print': get a display of the maze again
+maze> woof
+What's that? I didn't get that. The list of available commands are as follows:
+'done': finish with this maze
+'solvable?': check if this maze can be solved
+'solve': get a route through the maze, if it can be solved
+'print': get a display of the maze again
+maze> print
+Want to see the maze again? Sure, here it is:
++ - + - + - + - + - +
+|           |   |   |
++ - + - +   + - + - +
+|   |   |   |   |   |
++ - + - +   +   + - +
+|               |   |
++ - + - + - +   + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+Anything else? Remember, the commands are as follows:
+'done': finish with this maze
+'solvable?': check if this maze can be solved
+'solve': get a route through the maze, if it can be solved
+'print': get a display of the maze again
+maze> solvable?
+Where do you want to start in the maze?
+What X-coordinate? 0
+What Y-coordinate? 0
+Where do you want to finish?
+What X-coordinate? 2
+What Y-coordinate? 3
+Checking if the maze is solvable... Please wait...
+Sorry about that, seems that the maze doesn't have a solution for you...
+
+Anything else? Remember, the commands are as follows:
+'done': finish with this maze
+'solvable?': check if this maze can be solved
+'solve': get a route through the maze, if it can be solved
+'print': get a display of the maze again
+maze> solvable?
+Where do you want to start in the maze?
+What X-coordinate? 0
+What Y-coordinate? 0
+Where do you want to finish?
+What X-coordinate? 3
+What Y-coordinate? 2
+Checking if the maze is solvable... Please wait...
+This maze can be solved. If you want to see the solution, use the command 'solve'.
+
+Anything else? Remember, the commands are as follows:
+'done': finish with this maze
+'solvable?': check if this maze can be solved
+'solve': get a route through the maze, if it can be solved
+'print': get a display of the maze again
+maze> solve
+Where do you want to start in the maze?
+What X-coordinate? 0
+What Y-coordinate? 0
+Where do you want to finish?
+What X-coordinate? 2
+What Y-coordinate? 3
+Checking if the maze is solvable... Please wait...
+Travelling to (2, 0) from (1, 0).
++ - + - + - + - + - +
+|         X |   |   |
++ - + - +   + - + - +
+|   |   |   |   |   |
++ - + - +   +   + - +
+|               |   |
++ - + - + - +   + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+
+Travelling to (3, 0) from (2, 0).
++ - + - + - + - + - +
+|           | X |   |
++ - + - +   + - + - +
+|   |   |   |   |   |
++ - + - +   +   + - +
+|               |   |
++ - + - + - +   + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+
+Travelling to (2, 2) from (2, 1).
++ - + - + - + - + - +
+|           |   |   |
++ - + - +   + - + - +
+|   |   |   |   |   |
++ - + - +   +   + - +
+|               |   |
++ - + - + - +   + - +
+|   |   | X |   |   |
++ - + - + - + - + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+
+Travelling to (2, 3) from (2, 2).
++ - + - + - + - + - +
+|           |   |   |
++ - + - +   + - + - +
+|   |   |   |   |   |
++ - + - +   +   + - +
+|               |   |
++ - + - + - +   + - +
+|   |   | X |   |   |
++ - + - + - + - + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+
+Travelling to (4, 2) from (3, 2).
++ - + - + - + - + - +
+|           |   |   |
++ - + - +   + - + - +
+|   |   |   |   |   |
++ - + - +   +   + - +
+|               | X |
++ - + - + - +   + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+
+Travelling to (3, 0) from (3, 1).
++ - + - + - + - + - +
+|           |   |   |
++ - + - +   + - + - +
+|   |   |   |   |   |
++ - + - +   +   + - +
+|             X |   |
++ - + - + - +   + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+
+Uh-oh. Ran into a dead end... Backtracking...
+
+Travelling to (3, -1) from (3, 0).
++ - + - + - + - + - +
+|           |   |   |
++ - + - +   + - + - +
+|   |   |   |   |   |
++ - + - +   +   + - +
+|             X |   |
++ - + - + - +   + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+
+Uh-oh. Ran into a dead end... Backtracking...
+
+Sorry about that, seems that the maze doesn't have a solution for you...
+
+Anything else? Remember, the commands are as follows:
+'done': finish with this maze
+'solvable?': check if this maze can be solved
+'solve': get a route through the maze, if it can be solved
+'print': get a display of the maze again
+maze> solve
+Where do you want to start in the maze?
+What X-coordinate? 0
+What Y-coordinate? 0
+Where do you want to finish?
+What X-coordinate? 3
+What Y-coordinate? 2
+Checking if the maze is solvable... Please wait...
+Travelling to (2, 0) from (1, 0).
++ - + - + - + - + - +
+|         X |   |   |
++ - + - +   + - + - +
+|   |   |   |   |   |
++ - + - +   +   + - +
+|               |   |
++ - + - + - +   + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+
+Travelling to (3, 0) from (2, 0).
++ - + - + - + - + - +
+|           | X |   |
++ - + - +   + - + - +
+|   |   |   |   |   |
++ - + - +   +   + - +
+|               |   |
++ - + - + - +   + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+
+Travelling to (2, 2) from (2, 1).
++ - + - + - + - + - +
+|           |   |   |
++ - + - +   + - + - +
+|   |   |   |   |   |
++ - + - +   +   + - +
+|               |   |
++ - + - + - +   + - +
+|   |   | X |   |   |
++ - + - + - + - + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+
+Travelling to (2, 3) from (2, 2).
++ - + - + - + - + - +
+|           |   |   |
++ - + - +   + - + - +
+|   |   |   |   |   |
++ - + - +   +   + - +
+|               |   |
++ - + - + - +   + - +
+|   |   | X |   |   |
++ - + - + - + - + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+
+Travelling to (4, 2) from (3, 2).
++ - + - + - + - + - +
+|           |   |   |
++ - + - +   + - + - +
+|   |   |   |   |   |
++ - + - +   +   + - +
+|               | X |
++ - + - + - +   + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+
+Travelling to (3, 0) from (3, 1).
++ - + - + - + - + - +
+|           |   |   |
++ - + - +   + - + - +
+|   |   |   |   |   |
++ - + - +   +   + - +
+|             X |   |
++ - + - + - +   + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+|   |   |   |   |   |
++ - + - + - + - + - +
+
+Uh-oh. Ran into a dead end... Backtracking...
+
+And that's the solution!
+
+Anything else? Remember, the commands are as follows:
+'done': finish with this maze
+'solvable?': check if this maze can be solved
+'solve': get a route through the maze, if it can be solved
+'print': get a display of the maze again
+maze> done
+Thanks for playing! Want to play through another maze?
+maze> no
+Oh. Okay. Have a good day!
